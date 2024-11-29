@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вишлист</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f0f8ff;
+      color: #333;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+      background: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+    textarea {
+      width: 100%;
+      border: none;
+      padding: 8px;
+      font-size: 14px;
+      resize: none;
+    }
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align: center;">Вишлист</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Имя</th>
+        <th>Пожелание</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Генерация строк -->
+      <script>
+        for (let i = 0; i < 25; i++) {
+          document.write(`
+            <tr>
+              <td><textarea placeholder="Ваше имя"></textarea></td>
+              <td><textarea placeholder="Ваше пожелание"></textarea></td>
+            </tr>
+          `);
+        }
+      </script>
+    </tbody>
+  </table>
+  <button onclick="alert('Пожелания сохранены!')">Сохранить</button>
+</body>
+</html>
